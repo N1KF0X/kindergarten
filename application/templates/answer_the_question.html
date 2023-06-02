@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content%}
+{% if request.user.is_authenticated %}
+<p class="label user-out"> {{user.username}} | <a href="{% url 'logout' %}">Выйти</a></p>
+{% else %}
+<meta http-equiv="Refresh" content="0; {% url 'login' %}">
+{% endif %}
+<form method = "post">
+    {% csrf_token %}           
+    <table>
+        <p class="label">{{label}}</p>
+        {{ form }}
+    </table>
+    <button type = "submit">Отправить</button>
+</form>
+{% endblock content%}

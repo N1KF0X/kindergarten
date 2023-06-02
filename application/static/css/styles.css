@@ -1,0 +1,60 @@
+
+
+form {
+    margin: auto;
+    text-align: left;
+    width: 600px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: beige;
+    border: solid 5px bisque;
+}
+
+table {
+    width: 800px;
+    text-align: left;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+td {
+    height: 40px;
+}
+
+thead, tfoot {
+    background-color: beige;
+    color: black;
+}
+
+.label {
+    text-align: center;
+}
+
+.link {
+    margin-right: auto;
+    margin-left: auto;
+    width: 600px;
+}
+
+.border {
+    border: solid 1px bisque;
+}
+
+.margin {
+    margin: auto;
+}
+
+.user-out {
+    text-align: right;
+    color: #000;
+    font-size: 25px;
+    margin: 10px;
+}
+
+.header {
+	background: bisque;
+	height: 60px;
+}
+
+

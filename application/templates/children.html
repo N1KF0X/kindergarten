@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content%}
+{% if request.user.is_authenticated %}
+<p class="label user-out"> {{user.username}} | <a href="{% url 'logout' %}">Выйти</a></p>
+{% else %}
+<meta http-equiv="Refresh" content="0; {% url 'login' %}">
+{% endif %}
+<table class="label margin">
+    <thead>
+        <tr>
+            <th colspan="6">Ваши группы</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr> 
+            <td class="border label">Ф.И.О.</td>
+            <td class="border label">Возраст</td>
+            <td class="border label">Номер телефона родителя/опекуна</td>
+            <td class="border label">Нуждается в психологе</td>      
+            <td class="border label">Нуждается в логопеде</td>
+            <td class="border label">Программа посещения</td>
+        </tr>
+        {% for child in children %}
+        <tr>
+            <td class="border label">{{child.full_name}}</td>
+            <td class="border label">{{child.age}}</td>
+            <td class="border label">{{child.phone_number}}</td>
+            <td class="border label">{{child.needs_a_psychologist}}</td>
+            <td class="border label">{{child.needs_a_logopedist}}</td>
+            <td class="border label">{{child.program}}</td>
+        </tr>
+        {% endfor %}      
+    </tbody>
+</table>                                
+{% endblock content%}
