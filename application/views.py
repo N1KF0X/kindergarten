@@ -46,7 +46,7 @@ def teacher_app(request):
 
 def child_app(request):
     form = SendChildAppForm()
-    title = 'Анкета ребёнка'
+    title = 'Запись ребёнка в группу'
     data = {
         'form': form,
         'title': title,

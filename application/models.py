@@ -65,15 +65,61 @@ class TeacherApplication(Application):
         verbose_name_plural='Заявки на трудоустройство'
 
 
-class ChildApplication(Application):
-    age = models.IntegerField(verbose_name='Возраст ребёнка')
+class AdaptiveApplication(Application):
     child_full_name = models.CharField(
         verbose_name="Ф.И.О. ребёнка", 
         max_length=50,
     )
-    need_in_logopedist = models.BooleanField(verbose_name='Нужен логопед')
-    need_in_psychologist = models.BooleanField(verbose_name='Нужен психолог')
+
+    class Meta:
+        verbose_name='Адаптационная заявка'
+        verbose_name_plural='Адаптационные заявки'
+
+
+class ChildApplication(AdaptiveApplication):
+    education_orientation = [
+        ('OBJ','Основы безопасности жизнедеятельности'),
+        ('NPV',"Нравствено-патриотическое воспитание"),
+        ('KET',"Культурно-этические нормы"),
+        ('VFK',"Воспитание финансовой культуры"),
+        ('EV',"Экологическое воспитание"),
+        ('IR',"Индивидуальное развитие"),
+        ('RR',"Развитие речи"),
+        ('MO',"Методика общения"),
+        ('HER',"Художествено-эстетическое развитие"),
+        ('MRV',"Музыкально-ритмическое воспитание"),
+        ('FV',"Физическое воспитание"),
+        ('RKRT',"Развитие конструирования и ручного труда"),
+    ]
+
+    specialist_services = [
+        ('LD',"Логопед-дефектолог"),
+        ('S',"Сурдопедагог (Нарушение слуха)"),
+        ('T',"Тифлопедагог (Нарушение зрения)"),
+    ]
+
+    age = models.IntegerField(verbose_name='Возраст ребёнка')
+    art_club = models.BooleanField(verbose_name="Юный художник (Рисование)")
+    dance_club = models.BooleanField(verbose_name="Танцуем вместе (Танцы)")
+    music = models.BooleanField(verbose_name="Весёлые нотки (Музыкальный кружок)")
+    physical_culture_club = models.BooleanField(verbose_name="Спортивные ребята (Физкультурный кружок)")
+    needlework_club = models.BooleanField("Волшебные ручки (Рукоделие)")
+    robotics = models.BooleanField(verbose_name="Ротоботехника")
+    foreign_languages = models.BooleanField(verbose_name="Английский язык")
+    orientation_of_education = models.CharField(
+        verbose_name='Направленость обучения',
+        max_length=4,
+        choices=education_orientation,
+    )
+    specialist_service = models.CharField(
+        verbose_name='Услуги специалиста',
+        max_length=4,
+        choices=specialist_services,
+    )
+
 
     class Meta:
         verbose_name='Заявка на посесещение садика'
         verbose_name_plural='Заявки на посесещения садика'
+
+

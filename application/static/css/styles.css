@@ -1,34 +1,22 @@
-
-
-form {
-    margin: auto;
-    text-align: left;
-    width: 600px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 20px;
-    background-color: beige;
-    border: solid 5px bisque;
+* {
+    padding: 0;
+    margin: 0;
 }
 
-table {
-    width: 800px;
-    text-align: left;
-    margin-bottom: 20px;
-    margin-top: 20px;
+body {
+    background-image: url("/static/img/jy.jpg");
+    padding: 0;
+    line-height: 1.5;
 }
 
-td {
-    height: 40px;
-}
-
-thead, tfoot {
-    background-color: beige;
-    color: black;
+h3 {
+    margin: 20px auto;
 }
 
 .label {
     text-align: center;
+    margin-top: 20px;
+    margin-bottom: 5px;
 }
 
 .link {
@@ -45,16 +33,98 @@ thead, tfoot {
     margin: auto;
 }
 
-.user-out {
-    text-align: right;
-    color: #000;
-    font-size: 25px;
-    margin: 10px;
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #FFFAFA;
+    border: solid 5px plum;
+	height: 60px;
 }
 
-.header {
-	background: bisque;
-	height: 60px;
+.menu {
+    display: flex;
+    list-style: none;
+}
+
+.menu li{
+    margin-left: 20px;
+}
+
+.menu li a{
+    margin-left: 20px;
+    color: #000;
+    text-decoration: none;
+}
+
+.menu li a:hover{
+    color: gray;
+}
+
+
+.content_wrap{
+    width: 800px;
+    margin: 20px auto;
+    background-color: #FFFAFA;
+    border: solid 5px plum;
+    min-height: 525px;
+}
+
+.wrap {
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+    max-width: 600px;
+}
+
+.content {
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.footer_wrap{
+    background-color: #FFFAFA;
+    border: solid 5px plum;
+    padding: 10px;
+    justify-content: right;
+    display: flex;
+}
+
+table {
+    text-align: left;
+    border: solid 5px bisque;
+    width: 600px;
+    padding: 10px;
+}
+
+td {
+    height: 40px;
+}
+
+thead, tfoot {
+    background-color: beige;
+    color: black;
+}
+
+form {
+    margin: auto;
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 0 20px;
+    background-color: white;
+    width: 600px;
+}
+
+.header_h {
+    color: #000;
+    text-decoration: none;
+}
+
+.header_h:hover {
+    color: gray;
 }
 
 

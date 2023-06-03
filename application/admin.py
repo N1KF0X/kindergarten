@@ -34,7 +34,5 @@ class QuestionAdmin(admin.ModelAdmin):
         'email',
         'phone_number',
         'age',
-        'need_in_logopedist',
-        'need_in_psychologist',
     ]
     list_per_page = 10

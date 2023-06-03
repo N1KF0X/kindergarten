@@ -1,7 +1,12 @@
 {% extends "base.html" %}
 {% block content%}
-<p class="link"><a href="{% url 'login' %}">Войти как педагог</a></p>
-<p class="link"><a href="{% url 'question' %}">Задать вопрос</a></p>
-<p class="link"><a href="{% url 'child_app' %}">Запись в наш детский сад</a></p>
-<p class="link"><a href="{% url 'teacher_app' %}">Работа в нашем детском саду</a></p>                                  
+    <div class="content wrap">
+        <h2 class="partitle">О нашем детском саде</h2>
+        <h3>Направленость обучения</h3>
+        <p>Про направленость обучения</p>
+        <h3>Педогоги</h3>
+        <p>Про педогогов</p>
+        <h3>Дополнительные услуги</h3>
+        <p>Про дополнительные услуги</p>
+    </div>                              
 {% endblock content%}

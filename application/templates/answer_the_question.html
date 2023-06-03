@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 {% block content%}
 {% if request.user.is_authenticated %}
-<p class="label user-out"> {{user.username}} | <a href="{% url 'logout' %}">Выйти</a></p>
 {% else %}
 <meta http-equiv="Refresh" content="0; {% url 'login' %}">
 {% endif %}

@@ -16,4 +16,11 @@ class SendTeacherAppForm(forms.ModelForm):
 class SendChildAppForm(forms.ModelForm):
     class Meta:
         model = models.ChildApplication
-        fields = '__all__'
+        fields = ['full_name', 'email', 'phone_number', 'child_full_name', 'age', 'orientation_of_education', 'art_club',
+        'dance_club',
+        'music',
+        'physical_culture_club',
+        'needlework_club',
+        'robotics',
+        'foreign_languages',
+        'specialist_service',]
