@@ -7,7 +7,7 @@
     </head>
     <body>
         <section>
-            <header class="header">                
+            <header class="header style">                
                 <nav>
                     <ul class="menu">
                         <li><a href="{% url 'home' %}" class="header_h"><img src="/static/img/ch.png"></a></li>
@@ -29,12 +29,12 @@
                 </nav>
             </header>
         </section>
-        <section class="content_wrap">
+        <section class="content_wrap style">
             <h1 class="label">{{title}}</h1>
             {% block content%}
             {% endblock content %}
         </section>
-        <section class="footer_wrap">
+        <section class="footer_wrap style">
             <footer>
                 <p>Контакты</p>
                 <p>ВК:</p>

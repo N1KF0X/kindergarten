@@ -4,8 +4,8 @@
 }
 
 body {
-    background-image: url("/static/img/jy.jpg");
     padding: 0;
+    background-image: url("/static/img/jy.jpg");
     line-height: 1.5;
 }
 
@@ -13,17 +13,28 @@ h3 {
     margin: 20px auto;
 }
 
+.header {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    align-items: center;
+    padding-right: 20px;
+	height: 90px;
+}
+
 .content_wrap{
-    width: 800px;
     margin: 20px auto;
-    background-color: #FFFAFA;
-    border: solid 5px plum;
+    width: 800px;
     min-height: 700px;
 }
 
+.content {
+    margin: 0 auto;
+    box-sizing: border-box;
+    max-width: 600px;
+}
+
 .footer_wrap{
-    background-color: #FFFAFA;
-    border: solid 5px plum;
     padding: 10px;
     justify-content: right;
     display: flex;
@@ -36,20 +47,13 @@ h3 {
 }
 
 .text {
-    margin-right: auto;
-    margin-left: auto;
+    margin: auto;
     width: 600px;
 }
 
-.header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-right: 20px;
-    box-sizing: border-box;
-    background-color: #FFFAFA;
+.style {
+    background-color: snow;
     border: solid 5px plum;
-	height: 90px;
 }
 
 .menu {
@@ -71,12 +75,6 @@ h3 {
     color: gray;
 }
 
-.content {
-    margin: 0 auto;
-    box-sizing: border-box;
-    max-width: 600px;
-}
-
 table {
     text-align: left;
     width: 600px;
@@ -92,7 +90,6 @@ thead, tfoot {
 }
 
 form {
-    margin: auto;
     text-align: left;
     margin: 20px auto;
     padding: 0 20px;
@@ -100,10 +97,8 @@ form {
 }
 
 .data-table{
-    margin: auto;
     text-align: center;
-    margin-top: 20px;
-    margin-bottom: 5px;
+    margin: 20px auto;
 }
 
 .data-table td{
