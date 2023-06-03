@@ -4,7 +4,7 @@
 {% else %}
 <meta http-equiv="Refresh" content="0; {% url 'login' %}">
 {% endif %}
-<table class="label margin">
+<table class="data-table">
     <thead>
         <tr>
             <th colspan="6">Ваши дети</th>
@@ -12,21 +12,21 @@
     </thead>
     <tbody>
         <tr> 
-            <td class="border label">Ф.И.О.</td>
-            <td class="border label">Возраст</td>
-            <td class="border label">Номер телефона родителя/опекуна</td>
-            <td class="border label">Нуждается в психологе</td>      
-            <td class="border label">Нуждается в логопеде</td>
-            <td class="border label">Программа посещения</td>
+            <td>Ф.И.О.</td>
+            <td>Возраст</td>
+            <td>Номер телефона родителя/опекуна</td>
+            <td>Нуждается в психологе</td>      
+            <td>Нуждается в логопеде</td>
+            <td>Программа посещения</td>
         </tr>
         {% for child in children %}
         <tr>
-            <td class="border label">{{child.full_name}}</td>
-            <td class="border label">{{child.age}}</td>
-            <td class="border label">{{child.phone_number}}</td>
-            <td class="border label">{{child.needs_a_psychologist}}</td>
-            <td class="border label">{{child.needs_a_logopedist}}</td>
-            <td class="border label">{{child.program}}</td>
+            <td>{{child.full_name}}</td>
+            <td>{{child.age}}</td>
+            <td>{{child.phone_number}}</td>
+            <td>{{child.needs_a_psychologist}}</td>
+            <td>{{child.needs_a_logopedist}}</td>
+            <td>{{child.program}}</td>
         </tr>
         {% endfor %}      
     </tbody>

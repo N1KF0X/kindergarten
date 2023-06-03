@@ -8,7 +8,12 @@
     <body>
         <section>
             <header class="header">                
-                <a href="{% url 'home' %}" class="header_h">Детский сад "Фантазия"</a>
+                <nav>
+                    <ul class="menu">
+                        <li><a href="{% url 'home' %}" class="header_h"><img src="/static/img/ch.png"></a></li>
+                        <li><a href="{% url 'home' %}" class="header_h"><p>Детский сад "Фантазия"</p></a></li>
+                    </ul>
+                </nav>
                 <nav>
                     <ul class="menu">
                         <li><a href="{% url 'child_app' %}">Запись в наш детский сад</a></li>

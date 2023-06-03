@@ -13,35 +13,43 @@ h3 {
     margin: 20px auto;
 }
 
+.content_wrap{
+    width: 800px;
+    margin: 20px auto;
+    background-color: #FFFAFA;
+    border: solid 5px plum;
+    min-height: 700px;
+}
+
+.footer_wrap{
+    background-color: #FFFAFA;
+    border: solid 5px plum;
+    padding: 10px;
+    justify-content: right;
+    display: flex;
+}
+
 .label {
     text-align: center;
     margin-top: 20px;
     margin-bottom: 5px;
 }
 
-.link {
+.text {
     margin-right: auto;
     margin-left: auto;
     width: 600px;
-}
-
-.border {
-    border: solid 1px bisque;
-}
-
-.margin {
-    margin: auto;
 }
 
 .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px;
+    padding-right: 20px;
     box-sizing: border-box;
     background-color: #FFFAFA;
     border: solid 5px plum;
-	height: 60px;
+	height: 90px;
 }
 
 .menu {
@@ -63,40 +71,15 @@ h3 {
     color: gray;
 }
 
-
-.content_wrap{
-    width: 800px;
-    margin: 20px auto;
-    background-color: #FFFAFA;
-    border: solid 5px plum;
-    min-height: 525px;
-}
-
-.wrap {
+.content {
     margin: 0 auto;
-    padding: 0 20px;
     box-sizing: border-box;
     max-width: 600px;
 }
 
-.content {
-    padding-bottom: 10px;
-    padding-top: 10px;
-}
-
-.footer_wrap{
-    background-color: #FFFAFA;
-    border: solid 5px plum;
-    padding: 10px;
-    justify-content: right;
-    display: flex;
-}
-
 table {
     text-align: left;
-    border: solid 5px bisque;
     width: 600px;
-    padding: 10px;
 }
 
 td {
@@ -104,27 +87,25 @@ td {
 }
 
 thead, tfoot {
-    background-color: beige;
+    background-color: plum;
     color: black;
 }
 
 form {
     margin: auto;
     text-align: left;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 20px auto;
     padding: 0 20px;
-    background-color: white;
     width: 600px;
 }
 
-.header_h {
-    color: #000;
-    text-decoration: none;
+.data-table{
+    margin: auto;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 5px;
 }
 
-.header_h:hover {
-    color: gray;
+.data-table td{
+    border: solid 1px plum;
 }
-
-
