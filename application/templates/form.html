@@ -1,10 +1,7 @@
-{% extends "base.html" %}
-{% block content%}
 <form method = "post">
     {% csrf_token %}           
     <table>
         {{ form }}
     </table>
-    <button type = "submit">Отправить</button>
+    <button type = "submit">{{ button_title }}</button>
 </form>                                      
-{% endblock content%}

@@ -15,7 +15,7 @@ class QuestionAdmin(admin.ModelAdmin):
 
 
 @admin.register(TeacherApplication)
-class QuestionAdmin(admin.ModelAdmin):
+class TeacherAppAdmin(admin.ModelAdmin):
     list_display = [
         'full_name',
         'email',
@@ -27,12 +27,32 @@ class QuestionAdmin(admin.ModelAdmin):
     list_per_page = 10
 
 
-@admin.register(ChildApplication)
-class QuestionAdmin(admin.ModelAdmin):
+@admin.register(AdaptiveApplication)
+class AdaptiveAppAdmin(admin.ModelAdmin):
     list_display = [
         'full_name',
         'email',
         'phone_number',
-        'age',
+        'child_full_name',
+    ]
+    list_per_page = 10
+
+
+@admin.register(ChildApplication)
+class ChildAppAdmin(admin.ModelAdmin):
+    list_display = [
+        'full_name', 
+        'email', 
+        'phone_number', 
+        'child_full_name', 
+        'orientation_of_education', 
+        'art_club',
+        'dance_club',
+        'music',
+        'physical_culture_club',
+        'needlework_club',
+        'robotics',
+        'foreign_languages',
+        'specialist_service',
     ]
     list_per_page = 10

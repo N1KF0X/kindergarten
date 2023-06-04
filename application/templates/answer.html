@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content%}
+{% if request.user.is_authenticated %}
+{% else %}
+<meta http-equiv="Refresh" content="0; {% url 'login' %}">
+{% endif %}
+{% include "form.html" with form=form button_title=button_title title=title%}
+{% endblock content%}

@@ -10,7 +10,10 @@ from django.contrib.auth import logout
 class Login(LoginView):
     form_class = LoginForm
     template_name = 'login.html'
-    extra_context = {'title': 'Войти как педагог'}
+    extra_context = {
+        'title': 'Войти как педагог',
+        'button_title': 'Войти',
+    }
 
     def get_success_url(self):
         return reverse_lazy('children')
@@ -20,7 +23,7 @@ class ChildList(ListView):
     model = Child
     template_name = 'children.html'
     context_object_name = 'children'
-    extra_context = {'title': 'Ваши дети'}
+    extra_context = {'title': 'Группа'}
 
 
 def logout_user(request):

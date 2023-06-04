@@ -2,11 +2,7 @@
 {% block content%}
     <div class="content wrap">
         <h2 class="partitle">О нашем детском саде</h2>
-        <h3>Направленость обучения</h3>
         <p>Про направленость обучения</p>
-        <h3>Педогоги</h3>
-        <p>Про педогогов</p>
-        <h3>Дополнительные услуги</h3>
-        <p>Про дополнительные услуги</p>
-    </div>                              
+    </div>    
+    {% include "form.html" with form=form button_title=button_title title=title%}                          
 {% endblock content%}

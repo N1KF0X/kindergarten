@@ -2,8 +2,18 @@ from django.shortcuts import render, redirect
 from .forms import*
 
 
-def welcom(request):
-    return render(request, 'welcome.html', {'title': 'Добро пожаловать!'})
+button_title = 'Отправить'
+app_template = 'app.html'
+
+
+def home(request):
+    form = SendAdaptiveAppForm()
+    data = {
+        'form': form,
+        'title': 'Добро пожаловать!',
+        'button_title': button_title
+    }
+    return render(request, 'welcome.html', data)
 
 
 def question(request):
@@ -12,6 +22,7 @@ def question(request):
     data = {
         'form': form,
         'title': title,
+        'button_title': button_title
     }
 
     if request.method == 'POST':
@@ -21,7 +32,7 @@ def question(request):
 
             return redirect('success')     
 
-    return render(request, 'form.html', data)
+    return render(request, app_template, data)
 
 
 def teacher_app(request):
@@ -30,6 +41,7 @@ def teacher_app(request):
     data = {
         'form': form,
         'title': title,
+        'button_title': button_title
     }
 
     if request.method == 'POST':
@@ -41,7 +53,7 @@ def teacher_app(request):
     else:
         form = SendTeacherAppForm()
 
-    return render(request, 'form.html', data)
+    return render(request, app_template, data)
 
 
 def child_app(request):
@@ -50,6 +62,7 @@ def child_app(request):
     data = {
         'form': form,
         'title': title,
+        'button_title': button_title
     }
 
     if request.method == 'POST':
@@ -61,7 +74,7 @@ def child_app(request):
     else:
         form = SendChildAppForm()
 
-    return render(request, 'form.html', data)
+    return render(request, app_template, data)
 
 
 def success(request):

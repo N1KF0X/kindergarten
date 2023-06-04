@@ -76,6 +76,7 @@ class AdaptiveApplication(Application):
         verbose_name_plural='Адаптационные заявки'
 
 
+
 class ChildApplication(AdaptiveApplication):
     education_orientation = [
         ('OBJ','Основы безопасности жизнедеятельности'),
@@ -91,14 +92,12 @@ class ChildApplication(AdaptiveApplication):
         ('FV',"Физическое воспитание"),
         ('RKRT',"Развитие конструирования и ручного труда"),
     ]
-
     specialist_services = [
         ('LD',"Логопед-дефектолог"),
         ('S',"Сурдопедагог (Нарушение слуха)"),
         ('T',"Тифлопедагог (Нарушение зрения)"),
     ]
 
-    age = models.IntegerField(verbose_name='Возраст ребёнка')
     art_club = models.BooleanField(verbose_name="Юный художник (Рисование)")
     dance_club = models.BooleanField(verbose_name="Танцуем вместе (Танцы)")
     music = models.BooleanField(verbose_name="Весёлые нотки (Музыкальный кружок)")
@@ -106,6 +105,7 @@ class ChildApplication(AdaptiveApplication):
     needlework_club = models.BooleanField("Волшебные ручки (Рукоделие)")
     robotics = models.BooleanField(verbose_name="Ротоботехника")
     foreign_languages = models.BooleanField(verbose_name="Английский язык")
+
     orientation_of_education = models.CharField(
         verbose_name='Направленость обучения',
         max_length=4,
