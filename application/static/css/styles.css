@@ -8,6 +8,9 @@ body {
     background-image: url("/static/img/jy.jpg");
     background-attachment: fixed;
     line-height: 1.5;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
 }
 
 h3 {
@@ -30,7 +33,7 @@ h3 {
 .content_wrap{
     margin: 20px auto;
     width: 800px;
-    min-height: 700px;
+    min-height: 695px;
 }
 
 .content {
@@ -51,8 +54,9 @@ h3 {
 }
 
 .text {
-    margin: auto;
+    margin: 10px auto;
     width: 600px;
+    text-indent: 5%;
 }
 
 .style {
@@ -67,6 +71,7 @@ h3 {
 
 .main li a{
     margin-left: 10px;
+    margin-right: 20px;
     color: #000;
     text-decoration: none;
 }
@@ -118,7 +123,7 @@ form {
 .data-table{
     text-align: center;
     margin: 20px auto;
-    width: 700px;
+    width: 750px;
 }
 
 .data-table td{
