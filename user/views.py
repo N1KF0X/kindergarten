@@ -7,11 +7,16 @@ from .forms import *
 from .models import Child
 from django.contrib.auth import logout
 
+
+name = 'Детский сад "Фантазия": '
+
 class Login(LoginView):
     form_class = LoginForm
     template_name = 'login.html'
+    title = 'Войти как педагог'
     extra_context = {
-        'title': 'Войти как педагог',
+        'header': title,
+        'title': title,
         'button_title': 'Войти',
     }
 
@@ -23,7 +28,10 @@ class ChildList(ListView):
     model = Child
     template_name = 'children.html'
     context_object_name = 'children'
-    extra_context = {'title': 'Группа'}
+    extra_context = {
+        'title': name + 'Группа',
+        'header': 'Группа',
+    }
 
 
 def logout_user(request):

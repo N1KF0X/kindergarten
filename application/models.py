@@ -1,5 +1,6 @@
 from django.db import models
 from django.core.validators import RegexValidator
+from django.urls import reverse
 
 class Application(models.Model):
     phone_number_regex = RegexValidator(regex = r"^\+?1?\d{8,15}$")
@@ -17,6 +18,9 @@ class Application(models.Model):
 
     def __str__(self):
         return self.full_name
+    
+    def get_absolute_url(self):
+        return reverse('post', kwargs={'posr_id': self.pk})
 
     class Meta:
         abstract = True

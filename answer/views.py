@@ -5,9 +5,13 @@ from django.core.mail import send_mail
 from kindergarten.settings import DEFAULT_FROM_EMAIL
 
 
+name = 'Детский сад "Фантазия": '
+
+
 def answer(request):
     questions = Question.objects.all()
     button_title = 'Отправить'
+    header = 'Ответить на вопрос или анкету'
 
     if request.method == 'GET':
         form = AnswerForm()
@@ -27,7 +31,8 @@ def answer(request):
     data = {
         'questions': questions,
         'form': form,
-        'title': 'Ответить на вопрос или анкету',
+        'title': name + header,
+        'header': header,
         'button_title': button_title,
     }
 

@@ -40,5 +40,5 @@ class Teacher(models.Model):
     )
 
     class Meta:
-        verbose_name='Подагог'
-        verbose_name_plural='Подагоги'
+        verbose_name='Педагог'
+        verbose_name_plural='Педагоги'

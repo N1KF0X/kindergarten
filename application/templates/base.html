@@ -3,14 +3,16 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <link type="text/css" rel="stylesheet" href="{% static 'css/styles.css' %}" /> 
+        <link type="text/css" rel="stylesheet" href="{% static 'css/styles.css' %}" />
+        <link rel="shortcut icon" href="/static/img/ch.png" type="image/png">
+        <title>{{title}}</title>
     </head>
     <body>
         <section>
             <header class="header style">                
                 <nav>
                     <ul class="main">
-                        <li><a href="{% url 'home' %}" class="header_h"><img src="/static/img/ch.png"></a></li>
+                        <li><a href="{% url 'home' %}"><img src="/static/img/ch.png"></a></li>
                         <li><a href="{% url 'home' %}" class="header_h"><p>Детский сад "Фантазия"</p></a></li>
                     </ul>
                 </nav>
@@ -31,7 +33,7 @@
             </header>
         </section>
         <section class="content_wrap style">
-            <h1 class="label">{{title}}</h1>
+            <h1 class="label">{{header}}</h1>
             {% block content%}
             {% endblock content %}
         </section>

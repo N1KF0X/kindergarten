@@ -8,8 +8,8 @@ from django.conf.urls.static import static
 from kindergarten import settings
 
 
-admin.site.site_header = 'Детский садик [Название]'
-admin.site.index_title = 'Детский садик [Название] - Администрирование'
+admin.site.site_header = 'Детский садик "Фантазия"'
+admin.site.index_title = 'Детский садик "Фантазия" - Администрирование'
 
 urlpatterns = [
     path('admin/', admin.site.urls),

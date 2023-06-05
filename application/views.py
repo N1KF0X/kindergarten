@@ -10,8 +10,9 @@ def home(request):
     form = SendAdaptiveAppForm()
     data = {
         'form': form,
-        'title': 'Добро пожаловать!',
-        'button_title': button_title
+        'title': 'Детский сад "Фантазия"',
+        'header': 'Добро пожаловать!',
+        'button_title': button_title,
     }
     return render(request, 'welcome.html', data)
 
@@ -22,7 +23,8 @@ def question(request):
     data = {
         'form': form,
         'title': title,
-        'button_title': button_title
+        'header': title,
+        'button_title': button_title,
     }
 
     if request.method == 'POST':
@@ -41,7 +43,8 @@ def teacher_app(request):
     data = {
         'form': form,
         'title': title,
-        'button_title': button_title
+        'header': title,
+        'button_title': button_title,
     }
 
     if request.method == 'POST':
@@ -62,7 +65,8 @@ def child_app(request):
     data = {
         'form': form,
         'title': title,
-        'button_title': button_title
+        'header': title,
+        'button_title': button_title,
     }
 
     if request.method == 'POST':
@@ -78,4 +82,9 @@ def child_app(request):
 
 
 def success(request):
-    return render(request, 'success.html', {'title': 'Успех!'})
+    title = 'Успех!'
+    data = {
+        'title': title,
+        'header': title,
+    }
+    return render(request, 'success.html', )

@@ -13,20 +13,51 @@
     <tbody>
         <tr> 
             <td>Ф.И.О.</td>
-            <td>Возраст</td>
-            <td>Номер телефона родителя/опекуна</td>
-            <td>Нуждается в психологе</td>      
-            <td>Нуждается в логопеде</td>
-            <td>Программа посещения</td>
+            <td>Дата рождения</td>
+            <td>Родители/опекуны</td>
+            <td>Телефон родителя/опекуна</td>
+            <td>Направленость обучения</td>
+            <td>Услуги специалиста</td>
         </tr>
         {% for child in children %}
         <tr>
             <td>{{child.full_name}}</td>
-            <td>{{child.age}}</td>
+            <td>{{child.bdd}}</td>
+            <td>{{}child.parent_full_name}</td>
             <td>{{child.phone_number}}</td>
-            <td>{{child.needs_a_psychologist}}</td>
-            <td>{{child.needs_a_logopedist}}</td>
-            <td>{{child.program}}</td>
+            <td>{{child.orientation_of_education}}</td>
+            <td>{{child.specialist_service}}</td>
+        </tr>
+        {% endfor %}      
+    </tbody>
+</table>    
+<table class="data-table">
+    <thead>
+        <tr>
+            <th colspan="8">Кружки</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr> 
+            <td>Ф.И.О.</td>
+            <td>Рисование</td>      
+            <td>Танцы</td>
+            <td>Музыкальный кружок</td>
+            <td>Физкультурный кружок</td>
+            <td>Рукоделие</td>
+            <td>Ротоботехника</td>
+            <td>Английский язык</td>
+        </tr>
+        {% for child in children %}
+        <tr>
+            <td>{{child.full_name}}</td>
+            <td>{{child.art_club}}</td>
+            <td>{{child.dance_club}}</td>
+            <td>{{child.music}}</td>
+            <td>{{child.physical_culture_club}}</td>
+            <td>{{child.needlework_club}}</td>
+            <td>{{child.robotics}}</td>
+            <td>{{child.foreign_languages}}</td>
         </tr>
         {% endfor %}      
     </tbody>

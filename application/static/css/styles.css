@@ -6,6 +6,7 @@
 body {
     padding: 0;
     background-image: url("/static/img/jy.jpg");
+    background-attachment: fixed;
     line-height: 1.5;
 }
 
@@ -22,6 +23,10 @@ h3 {
 	height: 100px;
 }
 
+.header_h:hover {
+    color: gray;
+}
+
 .content_wrap{
     margin: 20px auto;
     width: 800px;
@@ -31,7 +36,7 @@ h3 {
 .content {
     margin: 0 auto;
     box-sizing: border-box;
-    max-width: 700px;
+    max-width: 600px;
 }
 
 .footer_wrap{
@@ -91,6 +96,7 @@ h3 {
 
 table {
     text-align: left;
+    margin: 20px auto;
     width: 600px;
 }
 
@@ -106,15 +112,16 @@ thead, tfoot {
 form {
     text-align: left;
     margin: 20px auto;
-    padding: 0 20px;
     width: 600px;
 }
 
 .data-table{
     text-align: center;
     margin: 20px auto;
+    width: 700px;
 }
 
 .data-table td{
     border: solid 1px plum;
 }
+
