@@ -35,8 +35,9 @@
 Для подробной информации перейдите по ссылке https://github.com/N1KF0X/kindergarten/wiki/0.-Руководство-пользователя
 
 ## Документация 
-* [Не функциональные требования](https://github.com/N1KF0X/kindergarten/raw/master/Resources/DOKI/NFT.docx)
-* [Спецификация](https://github.com/N1KF0X/kindergarten/raw/master/Resources/DOKI/S.docx)
-* [Таблицы описания прецендентов](https://github.com/N1KF0X/kindergarten/raw/master/Resources/DOKI/TOP.docx)
+
 * [Техническое задание](https://github.com/N1KF0X/kindergarten/raw/master/Resources/DOKI/TZ.docx)
+* [Спецификация](https://github.com/N1KF0X/kindergarten/raw/master/Resources/DOKI/S.docx)
 * [Функциональные требования](https://github.com/N1KF0X/kindergarten/raw/master/Resources/DOKI/FT.docx)
+* [Не функциональные требования](https://github.com/N1KF0X/kindergarten/raw/master/Resources/DOKI/NFT.docx)
+* [Таблицы описания прецендентов](https://github.com/N1KF0X/kindergarten/raw/master/Resources/DOKI/TOP.docx)
